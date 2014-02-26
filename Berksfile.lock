@@ -1,0 +1,49 @@
+{
+  "sources": {
+    "build-essential": {
+      "locked_version": "1.4.2"
+    },
+    "timezone": {
+      "locked_version": "0.0.1"
+    },
+    "yum": {
+      "locked_version": "3.0.4"
+    },
+    "vim": {
+      "locked_version": "1.1.2"
+    },
+    "ntp": {
+      "locked_version": "1.5.4"
+    },
+    "java": {
+      "locked_version": "1.19.2"
+    },
+    "mysql": {
+      "locked_version": "4.0.20"
+    },
+    "database": {
+      "locked_version": "1.6.0"
+    },
+    "cpan": {
+      "locked_version": "0.0.29"
+    },
+    "mycookbook": {
+      "path": "./chef/site-cookbooks/mycookbook"
+    },
+    "openssl": {
+      "locked_version": "1.1.0"
+    },
+    "postgresql": {
+      "locked_version": "3.3.4"
+    },
+    "apt": {
+      "locked_version": "2.3.8"
+    },
+    "aws": {
+      "locked_version": "1.0.0"
+    },
+    "xfs": {
+      "locked_version": "1.1.0"
+    }
+  }
+}

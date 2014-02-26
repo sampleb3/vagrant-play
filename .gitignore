@@ -1,0 +1,8 @@
+.DS_STORE
+*.box
+.vagrant
+.bashrc
+
+temp
+
+prod_server.json
