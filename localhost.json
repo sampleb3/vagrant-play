@@ -1,8 +1,4 @@
 {
-"name": "test_server",
-"chef_type": "role",
-"json_class": "Chef::Role",
-"default_attributes": {
 "java": {
 "install_flavor": "oracle",
 "jdk_version": "7",
@@ -33,7 +29,6 @@
 "server_root_password":   "123456",
 "server_repl_password":   "123456",
 "server_debian_password": "123456"
-}
 },
 "run_list": [
 "recipe[mycookbook]",

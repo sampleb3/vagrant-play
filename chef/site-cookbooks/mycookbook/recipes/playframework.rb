@@ -14,7 +14,6 @@
 end
 
 # ユーザとグループの作成
-
 group node['playframework']['group'] do
   group_name node['playframework']['group']
   action     [:create]
@@ -30,7 +29,7 @@ end
 
 # Play framework インストール
 version = node['playframework']['version']
-if ::Dir.exist?("#{node['playframework']['play_dir']}/play-#{version}")
+if !::Dir.exist?("#{node['playframework']['play_dir']}/play-#{version}")
 
   directory node['playframework']['play_dir'] do
     owner node['playframework']['user']
