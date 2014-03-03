@@ -31,6 +31,8 @@ end
 version = node['playframework']['version']
 if !::Dir.exist?("#{node['playframework']['play_dir']}/play-#{version}")
 
+  log "installing play framework..."
+
   directory node['playframework']['play_dir'] do
     owner node['playframework']['user']
     group node['playframework']['group']
@@ -57,8 +59,8 @@ if !::Dir.exist?("#{node['playframework']['play_dir']}/play-#{version}")
   bash "extract play zip" do
     cwd node['playframework']['play_dir']
     code <<-BASH
-    unzip #{cache_path}/#{zip_file_name}
-    chown -R #{node['playframework']['user']}:#{node['playframework']['group']} .
+      unzip #{cache_path}/#{zip_file_name}
+      chown -R #{node['playframework']['user']}:#{node['playframework']['group']} .
     BASH
   end
 
@@ -66,8 +68,9 @@ if !::Dir.exist?("#{node['playframework']['play_dir']}/play-#{version}")
     not_if "which play"
     user 'root'
     code <<-BASH
-      echo "export PATH=#{node['playframework']['play_dir']}/#{zip_ex_dir_name}":$PATH" >> /etc/bashrc
+      echo 'export PATH="#{node['playframework']['play_dir']}/#{zip_ex_dir_name}:$PATH"' >> /etc/bashrc
     BASH
   end
 
 end
+

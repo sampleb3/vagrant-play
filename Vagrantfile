@@ -19,9 +19,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = ["chef/cookbooks", "chef/vendor/cookbooks", "chef/site-cookbooks"]
-    # chef.roles_path = "chef/roles"
-    # chef.run_list = ["role[test_server]"]
-  
     chef.json = JSON.parse(File.read("localhost.json"))
 
     # chef.log_level = :debug
