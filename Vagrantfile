@@ -13,9 +13,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     vb.customize ["modifyvm", :id, "--memory", "1024"]
   end
 
-  config.vm.network :forwarded_port, guest: 80, host: 8082
-  config.vm.network :forwarded_port, guest: 3306, host: 8806
-  config.vm.network :forwarded_port, guest: 10000, host: 10000
+  config.vm.network :forwarded_port, guest: 80, host: 8082 # http
+  config.vm.network :forwarded_port, guest: 3306, host: 8806 # mysql
+  config.vm.network :forwarded_port, guest: 10000, host: 10000 # webmin
+  config.vm.network :forwarded_port, guest: 9000, host: 9000 # play
 
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = ["chef/cookbooks", "chef/vendor/cookbooks", "chef/site-cookbooks"]

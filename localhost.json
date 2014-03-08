@@ -18,7 +18,12 @@
 "group": "play",
 "user_password": "$1$/SM8MF/Q$SEQjHWQ8nLRP4UbFSVDGy1", // openssl passwd -1 "play"
 "play_dir": "/usr/local/play",
-"version": "1.2.5.3"
+"play_home": "/usr/local/play/play-1.2.7",
+"version": "1.2.7",
+"application": {
+	"path": "/home/play/helloworld",
+	"name": "helloworld"
+}
 },
 "mysqldb": {
 "database_name": "play",
@@ -38,6 +43,7 @@
 "recipe[mysql::server]",
 "recipe[mycookbook::mysqldb]",
 "recipe[mycookbook::playframework]",
+"recipe[mycookbook::playframework_app]",
 "recipe[mycookbook::iptables_off]"
 ]
 }
