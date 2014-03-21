@@ -7,6 +7,12 @@
 # All rights reserved - Do Not Redistribute
 #
 
+%w{expect}.each do |pkg|
+  package pkg do
+    action :install
+  end
+end
+
 # アプリケーションディレクトリの作成
 # expectを使用して、対話コマンドに対応
 template "/tmp/install_play.exp" do
