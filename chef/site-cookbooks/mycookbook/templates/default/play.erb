@@ -68,7 +68,7 @@ stop() {
 	# ${PLAY} stop ${APPLICATION2_PATH} > /dev/null
 	
 	RETVAL=$?
- 
+	
 	if [ $RETVAL -eq 0 ]; then
 		echo_success
 	else
@@ -80,6 +80,14 @@ status() {
 	${PLAY} status ${APPLICATION_PATH}
 	#${PLAY} status ${APPLICATION2_PATH}
 	RETVAL=$?
+ 
+	if [ $RETVAL -eq 0 ]; then
+		echo "play is running"
+		exit 0
+	else
+		echo "play is stopped"
+		exit 1
+	fi
 }
 clean() {
         rm -f ${APPLICATION_PATH}/server.pid
