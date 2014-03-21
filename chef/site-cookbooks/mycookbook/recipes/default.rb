@@ -114,6 +114,9 @@ template "/etc/ssh/sshd_config" do
   group "root"
   mode "0644"
   notifies :restart, resources(:service => "sshd")
+  variables({
+     :port => node['settings']['ssh_port'],
+  })
 end
 
 # sudo

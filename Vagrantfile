@@ -4,8 +4,8 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.box = "centos63"
-  config.vm.hostname = "centos63"
+  config.vm.box = "VagrantPlay"
+  config.vm.hostname = "VagrantPlay"
   config.vm.box_url = "https://github.com/2creatives/vagrant-centos/releases/download/v0.1.0/centos64-x86_64-20131030.box"
 
   config.vm.provider :virtualbox do |vb|

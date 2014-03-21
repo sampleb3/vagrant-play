@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: mycookbook
-# Recipe:: playframework
+# Recipe:: playframework_app
 #
 # Copyright 2014, YOUR_COMPANY_NAME
 #

@@ -11,7 +11,8 @@
 "group": "admin",
 "user_password": "$1$Se9v8lc7$avlgJL5v6goEM3H3TgQmq1", // openssl passwd -1 "admin"
 "ssh_key": "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA/pqBxPdR8HDwkss7W7gI2rehBOBe3DlmNY/nrl6fe+KMwyJo7QSl0jL6ggMTV1KQ/9jD1PjYicBCVTwL6zngcLgcIge03dTj2X90Np7GLe1ao9jH0dysLL825m+v1gL0DGlHkcIx27WhonzsVypBELlxC8Y2UCpgMQb49aPnQqMcWuk/AqCa/CaVosAGzo4OtVd0wTadS7NaZTX+qtoCgtpVIwKPG9g52+m+Na0z17PNvu5go18M1cOLexgg47esFKrIwRjs3CEpeWRCC09UFi5HVBT5cSeGYvNmrt5Ek0fb2Sg0EEUiePT0FH72PWuEAuul9PkBZ0TiV+erccRZKw== admin@centos63", // for authorized_keys
-"sudo_users": [ "vagrant","admin"]
+"sudo_users": [ "vagrant","admin"],
+"ssh_port": "22"
 },
 "playframework": {
 "user": "play",
@@ -37,6 +38,7 @@
 },
 "run_list": [
 "recipe[mycookbook]",
+"recipe[mycookbook::apache_off]",
 "recipe[java]",
 "recipe[mysql]",
 "recipe[mysql::client]",

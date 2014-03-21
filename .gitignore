@@ -4,5 +4,5 @@
 .bashrc
 
 temp
-
-prod_server.json
+prod_*.json
+/cookbooks/
