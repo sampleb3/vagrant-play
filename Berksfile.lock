@@ -40,7 +40,7 @@
       "locked_version": "2.3.8"
     },
     "aws": {
-      "locked_version": "2.1.0"
+      "locked_version": "1.0.0"
     },
     "xfs": {
       "locked_version": "1.1.0"
