@@ -42,7 +42,7 @@ template "/etc/init.d/play" do
   group "root"
   variables({
      :play_home => node['playframework']['play_home'],
-     :user => node['playframework']['user'],
+     :user => "root",
      :application_path => node['playframework']['application']['path']
   })
 end
@@ -50,5 +50,5 @@ end
 # サービス設定
 service "play" do
   supports :status => true, :restart => true
-  action [ :enable, :restart ]
+  action [ :enable, :start ]
 end
