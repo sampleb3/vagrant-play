@@ -15,14 +15,14 @@ port		= 3306
 socket		= /var/lib/mysql/mysql.sock
 skip-locking
 
-# ƒƒ‚ƒŠ’²®
+# ãƒ¡ãƒ¢ãƒªèª¿æ•´
 key_buffer_size = 30720K
 innodb_buffer_pool_size = 71680K
 innodb_additional_mem_pool_size = 1M
 innodb_log_buffer_size = 1M
 query_cache_size = 16M
 
-# ƒƒ‚ƒŠ’²®iƒXƒŒƒbƒhj
+# ãƒ¡ãƒ¢ãƒªèª¿æ•´ï¼ˆã‚¹ãƒ¬ãƒƒãƒ‰ï¼‰
 myisam_sort_buffer_size = 1M
 sort_buffer_size = 2M
 read_rnd_buffer_size = 256K
@@ -30,7 +30,7 @@ join_buffer_size = 256K
 read_buffer_size = 128K
 max_allowed_packet = 1M
 
-# ƒƒ‚ƒŠ’²®i‚»‚Ì‘¼j
+# ãƒ¡ãƒ¢ãƒªèª¿æ•´ï¼ˆãã®ä»–ï¼‰
 innodb_log_file_size = 35840K
 innodb_log_files_in_group = 2
 thread_cache_size = 8
@@ -57,30 +57,30 @@ character-set-server = utf8
 collation-server = utf8_general_ci
 init-connect = SET NAMES utf8
 
-# group_concat‚ÌÅ‘å•¶š”‚ğİ’è‚·‚é
+# group_concatã®æœ€å¤§æ–‡å­—æ•°ã‚’è¨­å®šã™ã‚‹
 group_concat_max_len=200000
 
-#ƒoƒCƒiƒŠƒƒO‚Ìíœ
+#ãƒã‚¤ãƒŠãƒªãƒ­ã‚°ã®å‰Šé™¤
 expire_logs_days=10
 
 
-#ƒXƒ[ƒƒO
+#ã‚¹ãƒ­ãƒ¼ãƒ­ã‚°
 log-slow-queries=/var/lib/mysql/slow_query.log
-#•bw’è
+#ç§’æŒ‡å®š
 long-query-time=2
-#Index‚ğw’è‚µ‚Ä‚¢‚È‚¢ƒNƒGƒŠ‚ªÀs‚³‚ê‚½Û‚ÉƒƒOo—Í‚·‚é
+#Indexã‚’æŒ‡å®šã—ã¦ã„ãªã„ã‚¯ã‚¨ãƒªãŒå®Ÿè¡Œã•ã‚ŒãŸéš›ã«ãƒ­ã‚°å‡ºåŠ›ã™ã‚‹
 #log-queries-not-using-indexes
-#ŠÇ——pƒRƒ}ƒ“ƒh‚ÌÀs‚àƒXƒ[ŠÄ‹‚·‚é
+#ç®¡ç†ç”¨ã‚³ãƒãƒ³ãƒ‰ã®å®Ÿè¡Œã‚‚ã‚¹ãƒ­ãƒ¼ç›£è¦–ã™ã‚‹
 #log-slow-admin-statements
 
-# mymemcheck‚É’Ç‰Á
+# mymemcheckæ™‚ã«è¿½åŠ 
 net_buffer_length=16384
 max_connections=20
 
-# ƒƒOƒoƒbƒtƒ@‚Ö‚Ì‘‚«‚İƒ^ƒCƒ~ƒ“ƒO
-# 0=–ˆ•b
-# 1=ƒRƒ~ƒbƒgiƒfƒtƒHƒ‹ƒgj
-# 2=ƒRƒ~ƒbƒgAƒtƒ‰ƒbƒVƒ…‚Í–ˆ•b
+# ãƒ­ã‚°ãƒãƒƒãƒ•ã‚¡ã¸ã®æ›¸ãè¾¼ã¿ã‚¿ã‚¤ãƒŸãƒ³ã‚°
+# 0=æ¯ç§’
+# 1=ã‚³ãƒŸãƒƒãƒˆæ™‚ï¼ˆãƒ‡ãƒ•ã‚©ãƒ«ãƒˆï¼‰
+# 2=ã‚³ãƒŸãƒƒãƒˆæ™‚ã€ãƒ•ãƒ©ãƒƒã‚·ãƒ¥ã¯æ¯ç§’
 innodb_flush_log_at_trx_commit = 1
 
 #log-err=/path/to/log

@@ -50,5 +50,5 @@ end
 # サービス設定
 service "play" do
   supports :status => true, :restart => true
-  action [ :enable, :start ]
+  action [ :enable, :restart ]
 end
